@@ -3,7 +3,6 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=vim,linux,macos,emacs,windows,visualstudiocode,python,flask
 
 insuranceQA-v2/
-docker-compose.yml
 local_settings.py
 rm -rf .git
 
