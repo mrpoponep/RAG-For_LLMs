@@ -4,12 +4,10 @@ from pymilvus import utility
 import google.generativeai as genai
 from pymilvus import MilvusClient
 from helper_func import create_prompt, process_data
-from local_settings import API_KEY,uri,token
-
 
 
 connections.connect(uri=st.secrets.uri,token=st.secrets.token)
-milvus_client = MilvusClient(uri=uri,token=token)
+milvus_client = MilvusClient(uri=st.secrets.uri,token=st.secrets.token)
 collection_name = "my_rag_collection2"
 
 # Streamlit app
