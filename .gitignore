@@ -5,6 +5,10 @@
 insuranceQA-v2/
 local_settings.py
 rm -rf .git
+Config/
+*.yaml
+*.yml
+*.json
 
 ### Emacs ###
 # -*- mode: gitignore; -*-

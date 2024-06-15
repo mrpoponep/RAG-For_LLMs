@@ -3,13 +3,13 @@ def process_data(data):
     for item in data:
         question = item[0][0].strip()
         answer = item[0][1].strip()
-        output+=f"{question}\n"
-        output+=f"{answer}\n\n"
+        output+=f"Q: {question}\n"
+        output+=f"A: {answer}\n\n"
     return output
 
 def create_prompt(document, question):
     PROMPT = f"""
-Task: Answer insurance-related questions accurately and provide some short explanation
+Task:Based on the QA styled context provided, answer insurance-related questions accurately and provide some short explanation.
 Instructions:
 Read the document carefully.
 Consider key points, concepts, and details within the document.
