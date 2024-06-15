@@ -1,4 +1,4 @@
 altair==4.0
 streamlit==1.15.2
-pymilvus==2.2.6
+pymilvus==2.2.14
 google-generativeai==0.5.0
