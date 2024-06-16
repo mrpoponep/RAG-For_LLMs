@@ -9,14 +9,16 @@ def process_data(data):
 
 def create_prompt(document, question):
     PROMPT = f"""
-Task:Based on the QA styled context provided, answer insurance-related questions accurately and provide some short explanation.
+Task: Your are a Insurance assistance, your job is based on a conversation of a costumer and a insurance expert, 
+answer insurance-related questions accurately and provide some short explanation.
 Instructions:
-Read the document carefully.
+Read the context carefully.
 Consider key points, concepts, and details within the document.
 Generate questions that seek information or clarification about the document's content.
 Ensure that the questions are grammatically correct and understandable.
 Give the answer directly, do not repeat the question or add any unrelated text
-If the question is not related to the context or there is no answer in the context, return None and do not answer any thing else
+If user talk to you casually, reply normally
+If the question is not related to the context or there is no answer in the context, tell the users the question is not related to insurance or there is no answer in your database
 Context:
 {document}
 
