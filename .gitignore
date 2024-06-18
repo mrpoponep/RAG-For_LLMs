@@ -9,6 +9,7 @@ Config/
 *.yaml
 *.yml
 *.json
+.streamlit/
 
 ### Emacs ###
 # -*- mode: gitignore; -*-

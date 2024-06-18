@@ -12,7 +12,8 @@ collection_name = "my_rag_collection2"
 
 # Streamlit app
 st.title("Insurance Q&A")
-
+st.header("AI Insurance Assistant")
+st.write("I am an insurance assistant, and I can answer popular insurance questions based on expert responses. I only answer insurance related question.")
 st.write("Ask a question and get an answer:")
 
 embedding_model = 'models/text-embedding-004'
@@ -46,3 +47,6 @@ if st.button("Get Answer"):
     response = LLM_model.generate_content(prompt)
     response =response.text.replace("JSON", "").replace("```","")
     st.success(f"Answer: {response}")
+
+st.subheader("Example question")
+st.page_link("https://github.com/mrpoponep/RAG-For_LLMs/blob/main/Misc/Example_data.jsonl",label="Questions similar to that I can answer can be found here")
