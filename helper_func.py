@@ -10,7 +10,7 @@ def process_data(data):
 def create_prompt(document, question):
     PROMPT = f"""
 Task: Your are a Insurance assistance, your job is based on a conversation of a costumer and a insurance expert, 
-answer insurance-related questions accurately and provide some short explanation.
+answer insurance-related questions accurately and provide detailed  explanation.
 Instructions:
 Read the context carefully.
 Consider key points, concepts, and details within the document.
