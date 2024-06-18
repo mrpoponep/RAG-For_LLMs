@@ -3,7 +3,7 @@ def process_data(data):
     for item in data:
         question = item[0][0].strip()
         answer = item[0][1].strip()
-        output+=f"Q: {question}\n"
+        output+=f"Q: {question}\n\n"
         output+=f"A: {answer}\n\n"
     return output
 
@@ -11,19 +11,31 @@ def create_prompt(document, question):
     PROMPT = f"""
 Task: Your are a Insurance assistance, your job is based on a conversation of a costumer and a insurance expert, 
 answer insurance-related questions accurately and provide some short explanation.
+
 Instructions:
+
 Read the context carefully.
+
 Consider key points, concepts, and details within the document.
+
 Generate questions that seek information or clarification about the document's content.
+
 Ensure that the questions are grammatically correct and understandable.
+
 Give the answer directly, do not repeat the question or add any unrelated text
+
 If the user talk to you casually, you can rely back
+
 If the question is blank, tell the user to type the question in.
+
 If the question is not related to the context or there is no answer in the context, tell the users the question is not related to insurance or there is no answer in your database
+
 Context:
+
 {document}
 
 Question:
+
 {question}
 
 """

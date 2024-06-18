@@ -23,8 +23,10 @@ def embed_fn(title, text):
                              content=text,
                              task_type="retrieval_document",
                              title=title)["embedding"]
-
+prompt=""
 user_question = st.text_input("Your Question:")
+
+st.sidebar.title("Prompt")
 
 
 if st.button("Get Answer"):
@@ -44,6 +46,7 @@ if st.button("Get Answer"):
 
     LLM_model = genai.GenerativeModel('gemini-pro')
     prompt=create_prompt(querry_data,user_question)
+    st.sidebar.write(prompt)
     response = LLM_model.generate_content(prompt)
     response =response.text.replace("JSON", "").replace("```","")
     st.success(f"Answer: {response}")
