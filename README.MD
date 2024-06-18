@@ -14,6 +14,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#architecture ">Architecture </a></li>
     <li><a href="#feature">Features</a></li>
     <li><a href="#deployed-application">Deployed Application</a></li>
   </ol>
@@ -56,7 +57,13 @@ Install milvus standalone: Follow instruction [here](https://milvus.io/docs/inst
 1. Start your milvus database and connect to it.
 2. Prepare your own dataset as jsonl file ([Example](/Misc/Example_data.jsonl)).
 3. Run main.ipynb file to upload your embeded data onto the database.
-4. Test your RAG and LLM by running Test.ipynb file.
+4. Test your RAG and LLM by running Test.ipynb file.\
+
+### Architecture 
+The system consists of the following components:
+
+
+![plot](/Misc/RAG_diagram.png)
 
 ### Features
 1. Real data used for trainning: Data used for retrieval are 21,325 answers for 12,889 common question gathered from this website [insurance library](https://www.insurancelibrary.com/).
