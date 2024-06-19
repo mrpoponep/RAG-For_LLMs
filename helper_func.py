@@ -3,6 +3,8 @@ def process_data(data):
     for item in data:
         question = item[0][0].strip()
         answer = item[0][1].strip()
+        answer = answer.replace(' -LRB- ', '(')
+        answer = answer.replace(' -RRB- ', ')')
         output+=f"Q: {question}\n\n"
         output+=f"A: {answer}\n\n"
     return output
