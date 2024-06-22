@@ -5,6 +5,7 @@ def process_data(data):
         answer = item[0][1].strip()
         answer = answer.replace('-LRB- ', '(')
         answer = answer.replace(' -RRB-', ')')
+        answer = answer.replace('``', " '' ")
         output+=f"Q: {question}\n\n"
         output+=f"A: {answer}\n\n"
     return output
@@ -17,13 +18,9 @@ Instructions:
 
 Read the context carefully.
 
-Consider key points, concepts, and details within the document.
-
 Generate questions that seek information or clarification about the document's content.
 
 Ensure that the questions are grammatically correct and understandable.
-
-Give the answer directly, do not repeat the question or add any unrelated text
 
 If the user talk to you casually, you can rely back
 
