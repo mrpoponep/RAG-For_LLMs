@@ -6,8 +6,8 @@ from helper_func import create_prompt, process_data
 from local_settings import API_KEY,uri,token
 
 collection_name = "my_rag_collection2"
-connections.connect(uri=uri,token=token)
-milvus_client = MilvusClient(uri=uri,token=token)
+connections.connect(uri=st.secrets.uri,token=st.secrets.token)
+milvus_client = MilvusClient(uri=st.secrets.uri,token=st.secrets.token)
 
 embedding_model = 'models/text-embedding-004'
 genai.configure(api_key=st.secrets.API_KEY)
