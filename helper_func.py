@@ -6,6 +6,7 @@ def process_data(data):
         answer = answer.replace('-LRB- ', '(')
         answer = answer.replace(' -RRB-', ')')
         answer = answer.replace('``', " '' ")
+        answer = answer.replace('`', " ' ")
         output+=f"Q: {question}\n\n"
         output+=f"A: {answer}\n\n"
     return output
